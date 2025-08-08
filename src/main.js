@@ -6,6 +6,8 @@ import movieRouter from "./routers/movie_router.js";
 const server = express();
 const PORT = process.env.PORT;
 
+server.use(express.json());
+
 connectDB();
 
 server.get("/", (req, res) => {
