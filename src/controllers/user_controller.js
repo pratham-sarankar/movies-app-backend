@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/user.js";
 
-const JWT_SECRET = "your_jwt_secret"; // ⚠️ Move this to .env in real projects
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // @desc Register user
 // @route POST /api/users/register
