@@ -4,10 +4,12 @@ import connectDB from "./config/database.js";
 import movieRouter from "./routers/movie_router.js";
 import commentRouter from "./routers/comment_router.js";
 import userRouter from "./routers/user_router.js";
+import cors from "cors";
 
 const server = express();
 const PORT = process.env.PORT;
 
+server.use(cors());
 server.use(express.json());
 
 connectDB();
